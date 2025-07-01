@@ -1,6 +1,6 @@
 ## Generating Your Required Secrets
 
-Add every secret below to a local `.env` file (never commit this file).  
+Add every secret below to a local `.env` file.  
 Example:
 
 ```dotenv
