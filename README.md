@@ -1,5 +1,4 @@
-# Codebase Overview
-
+# Fitbit MCP Server Overview
 ## TLDR;
 
 Use this code to connect either ChatGPT or Gemini to a Fitbit account through an MCP server.
