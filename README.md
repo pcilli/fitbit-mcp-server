@@ -99,7 +99,6 @@ or
    streamlit run streamlit_app_gemini.py
    ```
 
-   Change the script path if your UI file lives elsewhere.  
    The Streamlit app will open in your default browser (usually at **http://localhost:8501**).
 
 You can now chat with the bot – the UI will call the backend on **port 8000** using the Fitbit tokens you just authorised.
