@@ -1,3 +1,100 @@
+# Codebase Overview
+
+## Project Purpose
+
+This project provides a set of web applications and backend scripts for interacting with LLMs (such as Gemini and ChatGPT) and managing Fitbit data. It leverages **Streamlit** for web interfaces and **FastAPI** for backend API endpoints, integrating with Google and OpenAI’s language models as well as Fitbit data sources.
+
+---
+
+## File Summaries
+
+### 1. `streamlit_app_gemini.py`
+
+- **Purpose:**  
+  Web application interface built with Streamlit for interacting with Google’s Gemini LLM.
+- **Key Features:**  
+  - Accepts user queries and displays Gemini’s responses.
+  - Handles user session states and prompt management.
+  - Clean and minimal UI for LLM interaction.
+
+### 2. `streamlit_app_chatgpt.py`
+
+- **Purpose:**  
+  Web application interface built with Streamlit for interacting with OpenAI’s ChatGPT LLM.
+- **Key Features:**  
+  - Similar to the Gemini app, but uses the OpenAI API.
+  - Handles user queries and displays ChatGPT responses.
+  - Provides session and prompt history.
+
+### 3. `main.py`
+
+- **Purpose:**  
+  Main entry point for the FastAPI backend service.
+- **Key Features:**  
+  - Starts the API server.
+  - Sets up all routes and core API configuration.
+  - Likely includes startup events and root endpoint.
+
+### 4. `fitbit_router.py`
+
+- **Purpose:**  
+  FastAPI router for handling Fitbit-related API endpoints.
+- **Key Features:**  
+  - Contains routes for accessing and managing Fitbit data.
+  - Handles API requests, data formatting, and error handling specific to Fitbit integrations.
+  - Intended for modular integration into the main FastAPI application.
+
+### 5. `requirements.txt`
+
+- **Purpose:**  
+  Lists all required Python packages to run the codebase.
+- **Key Libraries:**  
+    - `fastapi`, `uvicorn` (backend web API)
+    - `streamlit` (web apps)
+    - `httpx`, `requests` (HTTP requests)
+    - `python-dotenv` (environment variable management)
+    - `openai`, `google-generativeai` (LLM APIs)
+    - `pydantic` (data validation)
+
+---
+
+## How the Pieces Fit Together
+
+- **Frontend:**  
+  The two Streamlit apps (`streamlit_app_gemini.py` and `streamlit_app_chatgpt.py`) provide user interfaces to interact with different LLMs.
+
+- **Backend:**  
+  `main.py` launches the FastAPI server, registering routes from `fitbit_router.py` and likely other modules. The backend provides APIs for Fitbit data handling and potentially serves as a backend for the Streamlit apps.
+
+- **Fitbit Integration:**  
+  All Fitbit API routes and logic are modularized in `fitbit_router.py`, which is included by the main FastAPI app.
+
+- **Dependencies:**  
+  All dependencies are listed in `requirements.txt` for easy installation and reproducibility.
+
+---
+
+## Getting Started
+
+1. **Install requirements:**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the backend API:**  
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+3. **Launch Streamlit apps:**  
+   ```bash
+   streamlit run streamlit_app_gemini.py
+   # or
+   streamlit run streamlit_app_chatgpt.py
+   ```
+
+---
+
 ## Generating Your Required Secrets
 
 Add every secret below to a local `.env` file.  
