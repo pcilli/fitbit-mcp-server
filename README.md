@@ -1,5 +1,9 @@
 # Codebase Overview
 
+## TLDR;
+
+Use this code to connect either ChatGPT or Gemini to a Fitbit account through an MCP server.
+
 ## Project Purpose
 
 This project provides a set of web applications and backend scripts for interacting with LLMs (such as Gemini and ChatGPT) and managing Fitbit data. It leverages **Streamlit** for web interfaces and **FastAPI** for backend API endpoints, integrating with Google and OpenAI’s language models as well as Fitbit data sources.
