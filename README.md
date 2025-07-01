@@ -90,7 +90,13 @@ GEMINI_API_KEY=xxxxxxxxxxxxxxxxxxxx
    In a second terminal:
 
    ```bash
-   streamlit run ui/fitbit_chatbot.py
+   streamlit run streamlit_app_chatgpt.py
+   ```
+   
+or
+
+   ```bash
+   streamlit run streamlit_app_gemini.py
    ```
 
    Change the script path if your UI file lives elsewhere.  
